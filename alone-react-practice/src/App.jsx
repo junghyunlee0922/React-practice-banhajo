@@ -1,4 +1,4 @@
-import Logo from "./Logo";
+import Logo from "./Logo"; // 내보내진 Logo component를 불러오기.
 
 // Logo함수 component
 // Logo.jsx로 보냄.
@@ -9,9 +9,11 @@ import Logo from "./Logo";
 // App함수 component
 function App() {
   return (
-    <div className="App">
+    <>
       <Logo />
-    </div>
+      <Logo />
+      <Logo />
+    </>
   );
 }
 
