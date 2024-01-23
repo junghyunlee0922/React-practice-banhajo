@@ -1,15 +1,20 @@
-import './App.css' // css코드를 불러온다.
+import './App.css'
+import { useState } from 'react';
 import Counter from "./Counter";
 
 
 // App함수 component
 function App() {
-  const list = Array(3).fill(null); // [null, null, null]
+  const list = Array(3).fill(null);
+
+    const [count, setCount] = useState(0);
+
+    const handleCountUp = () => setCount(count + 1);
 
   return (
     <div className="App">
       {list.map((_, index) => (
-        <Counter key={index} />
+        <Counter key={index} count={count} onCountUp={handleCountUp} />
       ))}
     </div>
   );

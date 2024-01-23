@@ -1,14 +1,12 @@
 import './Counter.css';
-import { useState } from 'react'; // 리액트 훅 불러오기.
 
-function Counter() {
-  const [count, setCount] = useState(0); 
 
-  const handleCountUp = () => setCount(count + 1);
+function Counter(props) {
+
 
   return (
-    <button type="button" className="Counter" onClick={handleCountUp}>
-      {count}
+    <button type="button" className="Counter" onClick={props.onCountUp}>
+      {props.count}
     </button>
   );
 }
