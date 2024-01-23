@@ -1,19 +1,16 @@
 import Logo from "./Logo"; // 내보내진 Logo component를 불러오기.
 import './App.css' // css코드를 불러온다.
 
-// Logo함수 component
-// Logo.jsx로 보냄.
-// function Logo() {
-//   return <img src="/react.svg" alt="리액트" />;
-// }
 
 // App함수 component
 function App() {
+  const list = Array(3).fill(null); // [null, null, null]
+
   return (
     <div className="App">
-      <Logo />
-      <Logo />
-      <Logo />
+      {list.map((_, index) => (
+        <Logo key={index} />
+      ))}
     </div>
   );
 }

@@ -8,8 +8,8 @@ const figcaptionStyle = { whiteSpace: "nowrap" }
 
 // Logo함수 component
 function Logo() {
-  const onlyRenderImage = true;
-  // const onlyRenderImage = false; // 거짓일때 조건문 작동 안함.
+  // const onlyRenderImage = true;
+  const onlyRenderImage = false; // 거짓일때 조건문 작동 안함.
 
   // if (onlyRenderImage) {
   //   return <img src={logoImage.src} alt="" />;
