@@ -1,5 +1,5 @@
-import Logo from "./Logo"; // 내보내진 Logo component를 불러오기.
 import './App.css' // css코드를 불러온다.
+import Counter from "./Counter";
 
 
 // App함수 component
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       {list.map((_, index) => (
-        <Logo key={index} />
+        <Counter key={index} />
       ))}
     </div>
   );
